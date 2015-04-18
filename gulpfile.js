@@ -106,7 +106,7 @@ gulp.task('wiredep', function () {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['jshint','html', 'images', 'fonts', 'extras'], function () {
+gulp.task('build', [/*'jshint',*/'html', 'images', 'fonts', 'extras'], function () {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
@@ -114,6 +114,6 @@ gulp.task('default', ['clean'], function () {
   gulp.start('build');
 });
 
-gulp.task('deploy', ['clean', 'build'], function(){
+gulp.task('deploy', ['build'], function(){
 	return gulp.src('dist/**/*').pipe(ghPages({remoteUrl: 'https://github.com/code-troopers/navigtours-website.git', push: true}));
 })
