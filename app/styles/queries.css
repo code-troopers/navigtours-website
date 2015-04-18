@@ -6,7 +6,7 @@
 }
 @media screen and (max-width:768px){
 	.device img{position: inherit;}
-	.device {text-align:center;}
+	.device {text-align:center;margin-top:50px;}
 	.hero h1{margin-top:0;}
 }
 @media screen and (max-width:640px){
