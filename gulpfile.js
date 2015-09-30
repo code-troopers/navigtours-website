@@ -115,5 +115,5 @@ gulp.task('default', ['clean'], function () {
 });
 
 gulp.task('deploy', ['build'], function(){
-	return gulp.src('dist/**/*').pipe(ghPages({remoteUrl: 'https://github.com/code-troopers/navigtours-website.git', push: true}));
+	return gulp.src('dist/**/*').pipe(ghPages({remoteUrl: 'git@github.com:code-troopers/navigtours-website.git', push: true}));
 })
