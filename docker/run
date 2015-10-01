@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -e
+
+npm install
+export CI=true
+bower install
+gulp serve
