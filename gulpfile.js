@@ -7,6 +7,11 @@ var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var ghPages = require('gulp-gh-pages');
 
+gulp.task('cname', function () {
+  return gulp.src('app/CNAME')
+    .pipe(gulp.dest('dist'));
+});
+
 gulp.task('styles', function () {
   return gulp.src('app/styles/main.css')
     .pipe($.sourcemaps.init())
@@ -106,7 +111,7 @@ gulp.task('wiredep', function () {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', [/*'jshint',*/'html', 'images', 'fonts', 'extras'], function () {
+gulp.task('build', [/*'jshint',*/'html', 'images', 'fonts', 'extras', 'cname'], function () {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
@@ -115,5 +120,5 @@ gulp.task('default', ['clean'], function () {
 });
 
 gulp.task('deploy', ['build'], function(){
-	return gulp.src('dist/**/*').pipe(ghPages({remoteUrl: 'https://github.com/code-troopers/navigtours-website.git', push: true}));
+	return gulp.src('dist/**/*').pipe(ghPages({remoteUrl: 'git@github.com:code-troopers/navigtours-website.git', push: true}));
 })
