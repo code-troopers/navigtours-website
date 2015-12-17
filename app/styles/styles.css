@@ -502,7 +502,7 @@ header i {
     width: 350px;
     position: absolute;
     top: 0;
-    right: 20%;	
+    right: 20%;
 }
 
 /* ==========================================================================
@@ -514,4 +514,10 @@ footer {
 footer p {
     color: #c7cacc;
     font-size: 12px;
+}
+
+.store-logo {
+  height: 60px;
+  width: 185px;
+  margin: 0 auto;
 }
