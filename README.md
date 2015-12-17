@@ -1,4 +1,4 @@
-[www.navigtours.com](www.navigtours.com)
+[www.navigtours.com](http://www.navigtours.com)
 
 ## Develop
 ```
